@@ -1,0 +1,25 @@
+/* made by fixedOtter on 22.7.2022 */
+
+#nav-bar {
+  background-color: mediumorchid;
+}
+
+.main #mainSect {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 80px 0 0;
+}
+
+.cardTitle {
+  background-color: slateblue;
+}
+
+.card {
+  margin: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+  .main #mainSect {
+    max-width: 69%;
+  }
+}

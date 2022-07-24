@@ -2,12 +2,14 @@
   "name": "teaminfogenerator",
   "version": "1.0.0",
   "description": "this will help you generate an about page for your team",
+  "type": "module",
   "main": "index.js",
   "directories": {
     "lib": "lib",
     "test": "test"
   },
   "scripts": {
+    "start": "node index.js",
     "test": "test"
   },
   "repository": {

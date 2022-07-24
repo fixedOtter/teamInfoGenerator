@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- fontawesome for fonts -->
+  <script src="https://kit.fontawesome.com/0b380c000c.js" crossorigin="anonymous"></script>
+  <!-- picnic stylesheet -->
+  <link rel="stylesheet" href="picnic.min.css">
+  <!-- local stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <title>About Team</title>
+</head>
+<body>
+
+<nav id="nav-bar" class="imponent flex center">
+  <a href="#" class="brand">
+    <h1>The A Team</h1>
+  </a>
+</nav>
+
+<!-- this is the main holder -->
+<main class="main">
+  <section id="mainSect" class="flex center one six-800">
+
+
+    <!-- card for each user -->
+    <article class="card">
+      <header class="cardTitle">
+        <i class="fa-solid fa-mug-hot"></i>
+        <h3>User Title</h3>
+      </header>
+      <footer>
+        <table class="primary full">
+          <tbody>
+            <thead>
+              <tr>
+                <th>User Name</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tr>
+              <td>ID:</td>
+              <td>user ID</td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>user email</td>
+            </tr>
+            <tr>
+              <td>github</td>
+              <td>fixedOtter</td>
+            </tr>
+          </tbody>
+        </table>
+      </footer>
+    </article>
+
+
+
+    <!-- add after iterating -->
+  </section>
+</main>
+
+</body>
+</html>
