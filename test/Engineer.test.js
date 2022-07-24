@@ -4,7 +4,7 @@
 import { Engineer } from '../lib/Engineer';
 
 describe('Basic data', () => {
-  it('Saves user name, email, ID, and officeNum', () => {
-    expect(new Engineer('bob', '69', 'bberry@email.com', 'fixedOtter').returnInfo()).toBe({ name: 'bob', userID: '69', userEmail: 'bberry@email.com', github: 'fixedOtter' });
+  it('Saves user type, name, email, ID, and github', () => {
+    expect(new Engineer('Engineer', 'bob', '69', 'bberry@email.com', 'fixedOtter').returnInfo()).toStrictEqual({ type: 'Engineer', name: 'bob', userID: '69', userEmail: 'bberry@email.com', github: 'fixedOtter' });
   })
 });

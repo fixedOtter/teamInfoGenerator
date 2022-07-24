@@ -8,7 +8,7 @@ import fs from 'fs';
 import { Engineer } from './lib/Engineer.js';
 import { Intern } from './lib/Intern.js';
 import { Manager } from './lib/Manager.js';
-import { dataPrinter } from './lib/dataPrinter.js';
+import { dataPrinter } from './lib/dataPrinter.mjs';
 
 /* declaring falsy for input while */
 let userDataArray = [];
@@ -62,32 +62,36 @@ const userInput = () => {
   inquirer.prompt(questionArray)
   .then((answers) => {
     
-    // call class for the right userType
+    // call class constructor for the right userType
     switch (answers.userType) {
       case 'Manager':
+        // calling the manager constructor to save the manager object
         let managerInfo = new Manager(answers.userType, answers.userName, answers.userID, answers.userEmail, answers.managerOfficeNum);
+        // pushing object to userDataArray for iterating through in the future
         userDataArray.push(managerInfo.returnInfo());
-        console.log(managerInfo.returnInfo());
         break;
       case 'Engineer':
+        // calling the manager constructor to save the manager object
         let engineerInfo = new Engineer(answers.userType, answers.userName, answers.userID, answers.userEmail, answers.engineerGitHub);
+        // pushing object to userDataArray for iterating through in the future
         userDataArray.push(engineerInfo.returnInfo());
-        console.log(engineerInfo.returnInfo());
         break;
       case 'Intern':
+        // calling the manager constructor to save the manager object
         let internInfo = new Intern(answers.userType, answers.userName, answers.userID, answers.userEmail, answers.internSchoolName);
+        // pushing object to userDataArray for iterating through in the future
         userDataArray.push(internInfo.returnInfo());
-        console.log(internInfo.returnInfo());
         break;
       default:
         break;
     }
 
+    // technically recursive lol
     confirmLoop();
   })
 }
 
-/* confirms if the userinput is done to make userInput recursive */
+/* confirms if the userinput is done to kinda make userInput recursive */
 const confirmLoop = () => {
   // checks if user wants to add another user
   inquirer.prompt([
@@ -102,8 +106,9 @@ const confirmLoop = () => {
     if (ans.keepGoing) {
       userInput();
     } else {
-      console.log(userDataArray);
+      // parses through userDataArray to save to one string
       let fileData = dataPrinter.dataPrinter(userDataArray);
+      // writes parsed userDataArray string to the index.html file
       fs.writeFile('./dist/index.html', fileData, (err) => {
         err ? console.error(err) : console.log('HTML generated!');
       });
@@ -111,11 +116,5 @@ const confirmLoop = () => {
   });
 }
 
+// main.js to actually start the recursive and get user input
 userInput();
-
-// while loop 
-// do {
-//   userInput();
-//   confirmLoop();
-
-// } while (gettingInput);

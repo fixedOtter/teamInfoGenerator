@@ -4,7 +4,7 @@
 import { Manager } from '../lib/Manager';
 
 describe('Basic data', () => {
-  it('Saves user name, email, ID, and officeNum', () => {
-    expect(new Manager('bob', '69', 'bberry@email.com', '69').returnInfo()).toBe({ name: 'bob', userID: '69', userEmail: 'bberry@email.com', officeNum: '69' });
+  it('Saves user type, name, email, ID, and officeNum', () => {
+    expect(new Manager('Manager', 'bob', '69', 'bberry@email.com', '69').returnInfo()).toStrictEqual({ type: 'Manager', name: 'bob', userID: '69', userEmail: 'bberry@email.com', officeNum: '69' });
   })
 });
