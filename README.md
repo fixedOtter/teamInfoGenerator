@@ -25,6 +25,7 @@ npm i
 
 ## Usage 
 The target use of this project is for users who don't want to be fuddling around with html and just want to generate a slick & quick 'about the team' HTML page.
+[Here's a link to a video walkthrough, incase you have any issues using it.](https://odysee.com/@fixedOtter:f/team-info-generator:3?r=B4Y8MuDybpNxa3KDKGjAgTn6gVyNHUno)
 
 ## Contributors
 Many thanks to Troy, who contributed to this project
