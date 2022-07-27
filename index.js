@@ -8,7 +8,7 @@ import fs from 'fs';
 import { Engineer } from './lib/Engineer.js';
 import { Intern } from './lib/Intern.js';
 import { Manager } from './lib/Manager.js';
-import { dataPrinter } from './lib/dataPrinter.mjs';
+import { dataPrinter } from './lib/dataPrinter.js';
 
 /* declaring falsy for input while */
 let userDataArray = [];
